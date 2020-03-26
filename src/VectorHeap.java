@@ -1,9 +1,13 @@
 import java.util.Vector;
 
 /**
+ * @author Brandon Hernández 19375
+ * @since 26/03/2020
+ * @version 26/03/2020
  *
+ * Implementación del contrato PriorityQueue, representando un heap
  * @reference Java Structures, Duane Bailey
- * @param <E>
+ * @param <E> tipo de dato que posee una extension de comparable
  */
 public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
 
