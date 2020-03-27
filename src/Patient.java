@@ -3,11 +3,12 @@ import java.lang.Comparable;
  * @author Brandon Hernández 19376
  * @since 26/03/2020
  * @version 26/03/2020
+ * @name Patient.java
  *
  * Se encarga de modelar a un paciente de un hospital
  * @param <E> tipo de dato que extiede a comparable
  */
-public class Patient<E extends Comparable<E>> implements Comparable<Patient<E>> {
+public class Patient<E extends Comparable<E>> implements Comparable<Patient<E>>, Person<E>{
 
     // Atributos de un paciente del hospital
     private E patientName, symptom, category;
@@ -43,7 +44,7 @@ public class Patient<E extends Comparable<E>> implements Comparable<Patient<E>> 
      * @return un string con la informacion del paciente
      */
     public String getPatientInfo(){
-        return "Nombre : " + this.patientName + "\nSintomas: " + this.symptom + "\nCategoría: " + this.category;
+        return "| Nombre : " + this.patientName + "\n| Sintomas: " + this.symptom + "\n| Categoría: " + this.category;
     }
 
 }

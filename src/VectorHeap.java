@@ -1,15 +1,15 @@
 import java.util.Vector;
-
 /**
  * @author Brandon Hernández 19375
  * @since 26/03/2020
  * @version 26/03/2020
+ * @name VectorHeap.java
  *
- * Implementación del contrato PriorityQueue, representando un heap
+ * Implementación del contrato Heap, representando un heap
  * @reference Java Structures, Duane Bailey
  * @param <E> tipo de dato que posee una extension de comparable
  */
-public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
+public class VectorHeap<E extends Comparable<E>> implements Heap<E> {
 
     protected Vector<E> data; // the data, kept in heap order
 
@@ -125,6 +125,17 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
         data.setSize(data.size()-1);
         if (data.size() > 1) pushDownRoot(0);
         return minVal;
+    }
+
+    /**
+     * Revisa si el heap esta vacio
+     *
+     * @return true si esta vacia y false si no lo esta
+     * @pos muestra si esta vacio el heap
+     */
+    @Override
+    public boolean isEmpty() {
+        return data.isEmpty();
     }
 
 }
